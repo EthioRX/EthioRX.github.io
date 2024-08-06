@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/shop.css">
+        <script src="../scripts/shop.js"></script>
+        <script src="../scripts/main.js"></script>
+    </head>
+    <body>
+        <!--Navigation-->
+        <header style="padding-top: 50px;">
+            <div class="nav-main">
+                <div class="nav-brand">
+                    <a href="../index.html"> <img src="../resources/images/Pharmaco.png" alt="Brand Image"></a>
+                </div>
+                
+                <nav class="nav-list-large">
+                    <div class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../pages/shop.html" class="nav-link active">Shop</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../pages/about.html" class="nav-link">About</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../pages/support.html" class="nav-link">Support</a>
+                    </div>
+                </nav>
+
+                <div class="nav-end">
+                    <div class="nav-end-item" style="display: flex; align-items: center;">
+                        <select id="translate" class="nav-link" onchange="changeLanguage(this.value)" style="background-color: royalblue; border: 0px;">
+                            <option value="en">English</option>
+                            <option value="am">Amharic</option>
+                            <option value="om">Oromiffa</option>
+                        </select>
+                    </div>
+                    <div class="nav-end-item" style=" padding: 10px;">
+                        <a href="../pages/cart.html" class="nav-link" id="cart">
+                            <img class="nav-icon" src="../resources/images/cart.png" alt="Cart icon">
+                            <p>Cart</p>
+                        </a>
+                    </div>
+                </div>   
+                <div class="hamburger">
+                    <p>☰</p>
+                    <p class="menu-text">MENU</p>
+                </div>
+            </div>
+            <nav class="nav-list-menu" style="display: none;">
+                <div class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../pages/shop.html" class="nav-link active">Shop</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../pages/about.html" class="nav-link">About</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../pages/support.html" class="nav-link">Support</a>
+                </div>
+            </nav>
+        </header>
+
+        <!--Shop Content-->
+        <main>
+            <div class="search-bar" style="background-image: url(../resources/images/bodyback2.png), linear-gradient(to bottom, transparent 46%, #f9f9f9 46%);">
+                <h3>Buy Medicene And Essentials</h3>
+                <div>
+                    <input type="text" id="search" placeholder="Search products...">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <select id="category-filter">
+                    <option value="medication">Medication</option>
+                    <option value="supplements">Supplements</option>
+                    <option value="equipment">Medical Equipment</option>
+                </select>
+            </div>
+        
+            <!-- Products Container -->
+            <div class="products-container" id="product-list"></div>
+        </main>
+        
+
+        <!--Bottom Navigation-->
+        <div class="bottom-nav">
+            <div class="nav-brand">
+                <img src="../resources/images/Pharmaco.png" alt="Brand Image">
+                <p>Receiving Medication, Made Easier</p>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/shop.html" class="nav-link active">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/support.html" class="nav-link">Support</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <footer>
+            <div class="foot-about">
+                <div class="foot-text">
+                    <p>
+                        Pharmaco ® was founded by <a href="./index.html" style="color: aqua;">PharmaTeam</a> and is hosted by Pharmaco Ltd.<br>
+                        Pharmaco Ltd. is a registered company in Ethiopia &amp; East Africa with number: +25191234567, registered address: Addis Ababa.
+                    </p>
+                </div>
+                <p class="foot-recog">
+                    Recognized by
+                    <br>
+                    <img src="../resources/images/moh_1.png" alt="MOH Logo">
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+        </script>
+    </body>
+</html>
