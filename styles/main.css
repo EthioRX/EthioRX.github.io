@@ -107,8 +107,7 @@ header {
 
 .hamburger {
     color: white;
-    font-size: clamp(1rem, 2vw, 1.25rem); 
-    border: 0.1vw solid;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     width: fit-content;
     padding: 0.4rem;
     flex-direction: row;
@@ -148,6 +147,9 @@ header {
     }
     .bottom-nav nav {
         display: none;
+    }
+    .nav-end-item #translate{
+        width: 50px;
     }
     .nav-end-item #cart p{
         display: none;
