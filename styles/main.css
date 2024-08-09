@@ -36,7 +36,9 @@ header {
 }
 
 .nav-brand img {
-    height: 3vh; 
+    width: 50%;
+    height: auto;
+    max-width: 200px;
 }
 
 .nav-list {
@@ -111,12 +113,6 @@ header {
     padding: 0.4rem;
     flex-direction: row;
     align-items: center;
-}
-
-@media (max-width: 375px) {
-    .nav-brand img{
-        height: 2.4vh;
-    }
 }
 
 @media (min-width: 1060px) {
