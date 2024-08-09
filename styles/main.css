@@ -114,6 +114,8 @@ header {
     font-size: clamp(1rem, 2vw, 1.25rem);
     width: fit-content;
     padding: 0.4rem;
+    border: 1px solid #5e76d3;
+    border-radius: 5px;
     flex-direction: row;
     align-items: center;
 }
