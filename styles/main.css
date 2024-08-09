@@ -33,10 +33,11 @@ header {
     display: flex;
     align-items: center;
     padding-left: 1vw; 
+    padding-bottom: 0px;
 }
 
 .nav-brand img {
-    width: 3.4vw; 
+    width: 3vw; 
 }
 
 .nav-list {
