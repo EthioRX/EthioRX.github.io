@@ -39,6 +39,10 @@ header {
     height: 3.4vh; 
 }
 
+.nav-brand a img{
+    height: 4vh;
+}
+
 .nav-list {
     display: flex;
     justify-content: space-around;
