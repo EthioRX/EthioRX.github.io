@@ -36,11 +36,7 @@ header {
 }
 
 .nav-brand img {
-    height: 3.4vh; 
-}
-
-.nav-brand a img{
-    height: 4vh;
+    width: 3.4vw; 
 }
 
 .nav-list {
