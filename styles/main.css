@@ -129,7 +129,7 @@ header {
         display: flex;
     }
     .nav-end-item #profile p{
-        display: none;
+        display: flex;
     }
     .hamburger .menu-text{
         display: flex;
