@@ -128,6 +128,9 @@ header {
     .nav-end-item #cart p{
         display: flex;
     }
+    .nav-end-item #profile p{
+        display: none;
+    }
     .hamburger .menu-text{
         display: flex;
     }
@@ -147,6 +150,9 @@ header {
         display: none;
     }
     .nav-end-item #cart p{
+        display: none;
+    }
+    .nav-end-item #profile p{
         display: none;
     }
     .hamburger .menu-text{
