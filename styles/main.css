@@ -11,13 +11,14 @@ header {
     left: 0;
     height: auto;
     width: 100%;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-top: 50px;
-    padding-right: 4vw; 
-    padding-bottom: 1vh; 
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-bottom: 1vh;
     z-index: 1000;
 }
 
@@ -39,6 +40,7 @@ header {
     width: 30vw;
     height: auto;
     max-width: 200px;
+    padding-right: 10px;
 }
 
 .nav-list {
@@ -62,8 +64,10 @@ header {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    padding-right: 3vw; 
+    border-bottom: 1px solid #768d94;
+    padding-right: 3vw;
     flex-grow: 0.1;
+    width: 100%;
 }
 
 .nav-item {
@@ -149,7 +153,7 @@ header {
         display: none;
     }
     .nav-end-item #translate{
-        width: 60px;
+        width: 72px;
     }
     .nav-end-item #cart p{
         display: none;
