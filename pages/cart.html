@@ -127,6 +127,14 @@
                                 </div>
                             </div>
                             <div class="purchase-group">
+                                <label for="location">Location:</label>
+                                <div class="location-select">
+                                  <button id="location-btn" onclick="getLocation();">
+                                    <img class="gps-marker" src="../resources/images/icons/gps.png"> Get GPS Location
+                                  </button>
+                                </div>
+                            </div>
+                            <div class="purchase-group">
                               <label for="house-number">House Number:</label>
                               <input type="text" id="house-number" placeholder="Enter your house number" required pattern="[0-9]{4}">
                             </div>

@@ -69,8 +69,8 @@ main{
     height: fit-content;
     background-color: white;
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 8%;
+    padding-right: 5%;
     padding-top: 20px;
     padding-bottom: 400px;
     flex-wrap: wrap;
@@ -81,7 +81,7 @@ main{
     flex-direction: column;
     border: 1px solid #57625d;
     padding: 16px;
-    width: 40vw;
+    width: 35vw;
     max-width: 300px;
     height: fit-content;
     box-sizing: border-box;

@@ -81,3 +81,25 @@ function validateForm() {
 function checkPrescriptionExists(prescriptionCode) {
     return prescriptionCode === '1234567890';
 }
+
+
+function getLocation() {
+  const locationBtn = document.getElementById('location-btn');
+
+  // Check if the browser supports geolocation
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        alert('Location: ', latitude, longitude);
+        locationBtn.innerText = 'GPS Location set';
+      },
+      (error) => {
+        console.error('Error getting location:', error);
+        alert('Unable to access your location. Please enter a location manually.');
+      }
+    );
+  } else {
+    locationBtn.style.display = 'none';
+  }
+}
