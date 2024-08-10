@@ -21,13 +21,10 @@
                 
                 <nav class="nav-list-large">
                     <div class="nav-item">
-                        <a href="../index.html" class="nav-link active">Home</a>
+                        <a href="../index.html" class="nav-link">About</a>
                     </div>
                     <div class="nav-item">
                         <a href="../pages/shop.html" class="nav-link">Shop</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="../pages/about.html" class="nav-link">About</a>
                     </div>
                     <div class="nav-item">
                         <a href="../pages/support.html" class="nav-link">Support</a>
@@ -43,7 +40,7 @@
                         </select>
                     </div>
                     <div class="nav-end-item" style=" padding: 10px;">
-                        <a href="../pages/cart.html" class="nav-link" id="cart">
+                        <a href="../pages/cart.html" class="nav-link active" id="cart">
                             <img class="nav-icon" src="../resources/images/icons/cart.png" alt="Cart icon">
                             <p>Cart</p>
                         </a>
@@ -62,13 +59,10 @@
             </div>
             <nav class="nav-list-menu" style="display: none;">
                 <div class="nav-item">
-                    <a href="../index.html" class="nav-link active">Home</a>
+                    <a href="../index.html" class="nav-link">Home</a>
                 </div>
                 <div class="nav-item">
                     <a href="../pages/shop.html" class="nav-link">Shop</a>
-                </div>
-                <div class="nav-item">
-                    <a href="../pages/about.html" class="nav-link">About</a>
                 </div>
                 <div class="nav-item">
                     <a href="../pages/support.html" class="nav-link">Support</a>
@@ -171,9 +165,6 @@
                         <a href="../pages/shop.html" class="nav-link">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../pages/about.html" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="../pages/support.html" class="nav-link">Support</a>
                     </li>
                 </ul>
@@ -196,15 +187,5 @@
                 </p>
             </div>
         </footer>
-
-        <script>
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    link.classList.add('active');
-                });
-            });
-        </script>
     </body>
 </html>

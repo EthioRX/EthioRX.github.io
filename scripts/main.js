@@ -20,4 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     main.addEventListener("click", function () {
         navList.style.display = navList.style.display === "flex" ? "none" : "none";
     });
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(link => link.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
 });
