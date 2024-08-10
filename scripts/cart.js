@@ -92,7 +92,8 @@ function getLocation() {
       (position) => {
         const { latitude, longitude } = position.coords;
         alert('Location: ', latitude, longitude);
-        locationBtn.innerText = 'GPS Location set';
+        const locationTxt = document.getElementById('location-txt');
+        locationTxt.innerText = 'GPS Location set';
       },
       (error) => {
         console.error('Error getting location:', error);
