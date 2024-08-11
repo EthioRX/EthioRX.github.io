@@ -54,6 +54,25 @@
     border-radius: 0.7vw;
 }
 
+.to-shop{
+    display: flex;
+    justify-content: center;
+}
+
+.to-shop-link{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    text-transform: uppercase;
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #2a3c84;
+    border-radius: 6px;
+}
+
 @media (max-width: 1060px) {
     .part-one .vid-div video {
         width: 50vw; 
