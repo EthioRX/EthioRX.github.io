@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const productIcon = document.createElement('img');
                 productIcon.id = "rx-icon";
                 productIcon.src = "../resources/images/icons/rxicon.png";
-                productIcon.style.width = "100%";
                 productCard.appendChild(productIcon);
             }
 

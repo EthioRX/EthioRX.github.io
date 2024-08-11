@@ -80,13 +80,12 @@ main{
     display: flex;
     flex-direction: column;
     border: 1px solid #57625d;
+    border-radius: 5px;
     padding: 16px;
     width: 100%;
-    max-width: 300px;
-    max-height: 300px;
+    height: fit-content;
     box-sizing: border-box;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
