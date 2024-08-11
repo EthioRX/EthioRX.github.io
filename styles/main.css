@@ -191,13 +191,19 @@ header, main {
     width: 100%;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+.noti-div{
+    position: fixed;
+    top: 600px;
+    right: 5px;
 }
 
-main {
-    padding-top: 21vh; 
+.noti-link{
+    display: flex;
+    align-items: center;
+    background-color: #3a4e55;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .bottom-nav {
