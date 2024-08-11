@@ -197,6 +197,12 @@ header, main {
     right: 5px;
 }
 
+@media (max-width: 700px) {
+    .noti-link p{
+        display: none;
+    }
+}
+
 .noti-link{
     display: flex;
     align-items: center;
