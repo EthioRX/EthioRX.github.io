@@ -128,15 +128,15 @@ main{
     gap: 5px;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 900px) {
     .product-card{
-        width: 32%;
+        width: 48%;
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1500px) {
     .product-card{
-        width: 50%;
+        width: 32%;
     }
 }
 
