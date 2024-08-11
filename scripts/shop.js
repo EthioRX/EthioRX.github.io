@@ -5,40 +5,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const products = [
         // Medications
-        { name: 'Ibuprofen', category: 'medication', price: '100 ETB', img: '../resources/images/medicene/ibuprofen.jpg' },
-        { name: 'Paracetamol', category: 'medication', price: '80 ETB', img: '../resources/images/medicene/paracetamol.jpg' },
-        { name: 'Amoxicillin', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/amoxicillin.jpg' },
-        { name: 'Loratadine', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/loratadine.jpg' },
-        { name: 'Omeprazole', category: 'medication', price: '200 ETB', img: '../resources/images/medicene/omeprazole.jpg' },
-        { name: 'Metformin', category: 'medication', price: '180 ETB', img: '../resources/images/medicene/metformin.jpg' },
-        { name: 'Albuterol', category: 'medication', price: '250 ETB', img: '../resources/images/medicene/albuterol.jpg' },
-        { name: 'Levothyroxine', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/levothyroxine.jpg' },
-        { name: 'Famotidine', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/famotidine.jpg' },
-        { name: 'Fluticasone', category: 'medication', price: '200 ETB', img: '../resources/images/medicene/fluticasone.jpg' },
+        { name: 'Ibuprofen', category: 'medication', price: '100 ETB', img: '../resources/images/medicene/ibuprofen.jpg', perscription="false" },
+        { name: 'Paracetamol', category: 'medication', price: '80 ETB', img: '../resources/images/medicene/paracetamol.jpg', perscription="false" },
+        { name: 'Amoxicillin', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/amoxicillin.jpg', perscription="false" },
+        { name: 'Loratadine', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/loratadine.jpg', perscription="true" },
+        { name: 'Omeprazole', category: 'medication', price: '200 ETB', img: '../resources/images/medicene/omeprazole.jpg', perscription="false" },
+        { name: 'Metformin', category: 'medication', price: '180 ETB', img: '../resources/images/medicene/metformin.jpg', perscription="false" },
+        { name: 'Albuterol', category: 'medication', price: '250 ETB', img: '../resources/images/medicene/albuterol.jpg', perscription="true" },
+        { name: 'Levothyroxine', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/levothyroxine.jpg', perscription="true" },
+        { name: 'Famotidine', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/famotidine.jpg', perscription="true" },
+        { name: 'Fluticasone', category: 'medication', price: '200 ETB', img: '../resources/images/medicene/fluticasone.jpg', perscription="true" },
       
         // Supplements
-        { name: 'Vitamin C', category: 'supplements', price: '80 ETB', img: '../resources/images/medicene/vitaminc.jpg' },
-        { name: 'Vitamin D3', category: 'supplements', price: '100 ETB', img: '../resources/images/medicene/vitamind3.jpg' },
-        { name: 'Omega-3 Fish Oil', category: 'supplements', price: '150 ETB', img: '../resources/images/medicene/omega3.jpg' },
-        { name: 'Multivitamins', category: 'supplements', price: '120 ETB', img: '../resources/images/medicene/multivitamins.jpg' },
-        { name: 'Magnesium', category: 'supplements', price: '90 ETB', img: '../resources/images/medicene/magnesium.jpg' },
-        { name: 'Zinc', category: 'supplements', price: '110 ETB', img: '../resources/images/medicene/zinc.jpg' },
-        { name: 'Coenzyme Q10', category: 'supplements', price: '180 ETB', img: '../resources/images/medicene/coq10.jpg' },
-        { name: 'Probiotics', category: 'supplements', price: '150 ETB', img: '../resources/images/medicene/probiotics.jpg' },
-        { name: 'Glucosamine', category: 'supplements', price: '120 ETB', img: '../resources/images/medicene/glucosamine.jpg' },
-        { name: 'Melatonin', category: 'supplements', price: '100 ETB', img: '../resources/images/medicene/melatonin.jpg' },
+        { name: 'Vitamin C', category: 'supplements', price: '80 ETB', img: '../resources/images/medicene/vitaminc.jpg', perscription="false" },
+        { name: 'Vitamin D3', category: 'supplements', price: '100 ETB', img: '../resources/images/medicene/vitamind3.jpg', perscription="false" },
+        { name: 'Omega-3 Fish Oil', category: 'supplements', price: '150 ETB', img: '../resources/images/medicene/omega3.jpg', perscription="false" },
+        { name: 'Multivitamins', category: 'supplements', price: '120 ETB', img: '../resources/images/medicene/multivitamins.jpg', perscription="false" },
+        { name: 'Magnesium', category: 'supplements', price: '90 ETB', img: '../resources/images/medicene/magnesium.jpg', perscription="false" },
+        { name: 'Zinc', category: 'supplements', price: '110 ETB', img: '../resources/images/medicene/zinc.jpg', perscription="false" },
+        { name: 'Coenzyme Q10', category: 'supplements', price: '180 ETB', img: '../resources/images/medicene/coq10.jpg', perscription="true" },
+        { name: 'Probiotics', category: 'supplements', price: '150 ETB', img: '../resources/images/medicene/probiotics.jpg', perscription="false" },
+        { name: 'Glucosamine', category: 'supplements', price: '120 ETB', img: '../resources/images/medicene/glucosamine.jpg', perscription="true" },
+        { name: 'Melatonin', category: 'supplements', price: '100 ETB', img: '../resources/images/medicene/melatonin.jpg', perscription="true" },
       
         // Medical Equipment
-        { name: 'Blood Pressure Monitor', category: 'equipment', price: '450 ETB', img: '../resources/images/medicene/bloodmonitor.jpg' },
-        { name: 'Thermometer', category: 'equipment', price: '150 ETB', img: '../resources/images/medicene/thermometer.jpg' },
-        { name: 'Pulse Oximeter', category: 'equipment', price: '300 ETB', img: '../resources/images/medicene/pulseoximeter.jpg' },
-        { name: 'Nebulizer', category: 'equipment', price: '600 ETB', img: '../resources/images/medicene/nebulizer.jpg' },
-        { name: 'First Aid Kit', category: 'equipment', price: '250 ETB', img: '../resources/images/medicene/firstaidkit.jpg' },
-        { name: 'Wheelchair', category: 'equipment', price: '2000 ETB', img: '../resources/images/medicene/wheelchair.jpg' },
-        { name: 'Crutches', category: 'equipment', price: '400 ETB', img: '../resources/images/medicene/crutches.jpg' },
-        { name: 'Walker', category: 'equipment', price: '500 ETB', img: '../resources/images/medicene/walker.jpg' },
-        { name: 'Blood Glucose Monitor', category: 'equipment', price: '350 ETB', img: '../resources/images/medicene/bloodglucosemonitor.jpg' },
-        { name: 'Stethoscope', category: 'equipment', price: '200 ETB', img: '../resources/images/medicene/stethoscope.jpg' }
+        { name: 'Blood Pressure Monitor', category: 'equipment', price: '450 ETB', img: '../resources/images/medicene/bloodmonitor.jpg', perscription="false" },
+        { name: 'Thermometer', category: 'equipment', price: '150 ETB', img: '../resources/images/medicene/thermometer.jpg', perscription="false" },
+        { name: 'Pulse Oximeter', category: 'equipment', price: '300 ETB', img: '../resources/images/medicene/pulseoximeter.jpg', perscription="false" },
+        { name: 'Nebulizer', category: 'equipment', price: '600 ETB', img: '../resources/images/medicene/nebulizer.jpg', perscription="false" },
+        { name: 'First Aid Kit', category: 'equipment', price: '250 ETB', img: '../resources/images/medicene/firstaidkit.jpg', perscription="false" },
+        { name: 'Wheelchair', category: 'equipment', price: '2000 ETB', img: '../resources/images/medicene/wheelchair.jpg', perscription="false" },
+        { name: 'Crutches', category: 'equipment', price: '400 ETB', img: '../resources/images/medicene/crutches.jpg', perscription="false" },
+        { name: 'Walker', category: 'equipment', price: '500 ETB', img: '../resources/images/medicene/walker.jpg', perscription="false" },
+        { name: 'Blood Glucose Monitor', category: 'equipment', price: '350 ETB', img: '../resources/images/medicene/bloodglucosemonitor.jpg', perscription="false" },
+        { name: 'Stethoscope', category: 'equipment', price: '200 ETB', img: '../resources/images/medicene/stethoscope.jpg', perscription="false" }
       ];
       
 
@@ -49,26 +49,37 @@ document.addEventListener('DOMContentLoaded', () => {
             productCard.className = 'product-card';
             productCard.setAttribute('data-category', product.category.toLowerCase());
 
-            const productImg = document.createElement('img');
-            productImg.src = product.img;
-            productImg.style.width = "100%";
-            productCard.appendChild(productImg);
+            if(product.perscription == "true"){
+                const productIcon = document.createElement('img');
+                productIcon.id = "rx-icon";
+                productIcon.src = "../resources/images/icons/rxicon.png";
+                productIcon.style.width = "100%";
+                productCard.appendChild(productIcon);
+            }
 
+            const productBox = document.createElement('div');
+            productBox.id = 'product-box';
+
+            const productImg = document.createElement('img');
+            productImg.id = "prod-img";
+            productImg.src = product.img;
+            productBox.appendChild(productImg);
+            
             const productName = document.createElement('h3');
             productName.textContent = product.name;
-            productCard.appendChild(productName);
+            productBox.appendChild(productName);
 
-            const productPrice = document.createElement('button');
+            const productPrice = document.createElement('p');
             productPrice.textContent = product.price;
-            productCard.appendChild(productPrice);
+            productBox.appendChild(productPrice);
 
             const productBtn = document.createElement('button');
-            productBtn.textContent = "ADD";
+            productBtn.textContent = "ADD TO CART";
             productBtn.className = "buy-button";
             productBtn.addEventListener('click', () => addToCart(product));
-            productCard.appendChild(productBtn);
+            productBox.appendChild(productBtn);
 
-            productList.appendChild(productCard);
+            productCard.appendChild(productBox);
             productList.appendChild(productCard);
         });
         
