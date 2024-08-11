@@ -61,7 +61,7 @@ For any inquiries or support, reach out to us through the following channels:
 - Email: support@ethiorx.com
 - Address: Addis Ababa, Ethiopia
 
-For more information, visit our [Support Page](https://ethiorx.github.io/support.html).
+For more information, visit our [Support Page](https://ethiorx.github.io/pages/support.html).
 
 [EthioRX Partners](https://ethiorx.github.io/)
 
