@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayCart() {
       const productList = document.getElementById('cart-products');
       productList.innerHTML = '';
+      let totalCost = 0;
 
       const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
@@ -18,12 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const productPrice = document.createElement('p');
         productPrice.textContent = product.price;
+        totalCost += parseFloat(product.price);
 
         productElement.appendChild(productImg);
         productElement.appendChild(productName);
         productElement.appendChild(productPrice);
         productList.appendChild(productElement);
       });
+
+      const productGrid = document.getElementById('cart-grid');
+      const costName = document.createElement('h3');
+      costName.textContent = `Total Cost: ${totalCost.toFixed(2)}Birr`;
+      costName.style.fontSize = `1rem`;
+      productGrid.appendChild(productImg);
     }
 
     displayCart();

@@ -44,7 +44,7 @@ main{
 .cart-top h1{
     color: rgb(255 255 255);
     font-size: clamp(1.875rem, 4.375vw + 1rem, 6.25rem);
-    padding-bottom: 80px;
+    margin-bottom: 65px;
 }
 
 .cart-grid{
@@ -76,6 +76,7 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .product-card {
@@ -96,7 +97,7 @@ main{
 }
 
 .product-card img {
-    max-width: 100%;
+    max-width: 60%;
 }
 
 .purchase-confirmation .perscription{
