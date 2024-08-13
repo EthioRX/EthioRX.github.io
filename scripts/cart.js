@@ -28,9 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       const productGrid = document.getElementById('cart-grid');
-      const costName = document.createElement('h3');
+      const costName = document.createElement('i');
       costName.textContent = `Total Cost: ${totalCost.toFixed(2)}Birr`;
       costName.style.fontSize = `1rem`;
+      costName.style.color = `black`;
       productGrid.appendChild(productImg);
     }
 
