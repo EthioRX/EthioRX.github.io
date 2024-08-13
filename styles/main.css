@@ -203,6 +203,12 @@ header, main {
     }
 }
 
+@media (min-width: 710px) {
+    .noti-link p{
+        display: flex;
+    }
+}
+
 .noti-link{
     display: flex;
     align-items: center;
