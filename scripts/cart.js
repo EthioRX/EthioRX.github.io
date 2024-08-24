@@ -1,38 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to display products in the cart
     function displayCart() {
-      const productList = document.getElementById('cart-products');
+      const productTable = document.getElementById('products-table');
+      const medHistory = document.getElementById('medhistory');
       productList.innerHTML = '';
       let totalCost = 0;
 
       const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
       cart.forEach((product) => {
-        const productElement = document.createElement('div');
+        const productElement = document.createElement('tr');
         productElement.className = 'product-card';
 
+        const drugInfo = document.createElement('th');
         const productImg = document.createElement('img');
-        productImg.src = product.img;
-
         const productName = document.createElement('h3');
+        drugInfo.className = 'drugInfo';
+        productImg.src = product.img;
         productName.textContent = product.name;
+        drugInfo.appendChild(productImg);
+        drugInfo.appendChild(productName);
+        medHistory.appendChild(productElement);
 
-        const productPrice = document.createElement('p');
-        productPrice.textContent = product.price;
+        const drugAmount = document.createElement('th');
+        drugAmount.className = 'drugAmount';
+        drugAmount.textContent = product.name;
+        medHistory.appendChild(drugAmount);
+
+
+        const drugPrice = document.createElement('th');
+        drugPrice.className = 'drugAmount';
+        drugPrice.textContent = product.price;
+        medHistory.appendChild(drugPrice);
+
         totalCost += parseFloat(product.price);
-
-        productElement.appendChild(productImg);
-        productElement.appendChild(productName);
-        productElement.appendChild(productPrice);
-        productList.appendChild(productElement);
       });
 
-      const productGrid = document.getElementById('cart-grid');
-      const costName = document.createElement('i');
-      costName.textContent = `Total Cost: ${totalCost.toFixed(2)}Birr`;
-      costName.style.fontSize = `1rem`;
-      costName.style.color = `black`;
-      productGrid.appendChild(productImg);
+      const totalPrice = document.createElement('i');
+      totalPrice.textContent = `Total Cost: ${totalCost.toFixed(2)}Birr`;
+      totalPrice.style.fontSize = `1rem`;
+      totalPrice.style.color = `black`;
+      productTable.appendChild(totalPrice);
     }
 
     displayCart();
