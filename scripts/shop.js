@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 productIcon.id = "rx-icon";
                 productIcon.src = "../resources/images/icons/rxicon.png";
                 productIcon.alt = "Perscription Only";
-                productCard.appendChild(productIcon);
+                productNameTop.appendChild(productIcon);
             }
             productBox.appendChild(productNameTop);
 
