@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${cartHTML}
             </tbody>
           </table>
-          <p style="font-size: 1rem; color: black;">Sum Cost: ${totalCost.toFixed(2)} Birr</p><br>
-          <p style="font-size: 1rem; color: grey;">Delivery Cost: ${totalCost.toFixed(2)} Birr</p><br>
-          <h2 style="font-size: 1rem; color: black;">Total Cost: ${totalCost.toFixed(2) } Birr</h2><br>
+          <p style="font-size: 1rem; color: black;">Sum: ${totalCost.toFixed(2)} Birr</p>
+          <p style="font-size: 1rem; color: grey;">Delivery: ${totalCost.toFixed(2) * 0.15} Birr</p>
+          <h2 style="font-size: 1.4rem; color: black;">Total Cost: ${totalCost.toFixed(2) + (totalCost.toFixed(2) * 0.15)} Birr</h2>
       `;
     }
 
