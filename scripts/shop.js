@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!products) {
         const products = [
             // Medications
-            { name: 'Ibuprofen [250mg]', category: 'medication', price: '100 ETB', img: '../resources/images/medicene/ibuprofen.jpg', perscription: "false", stores: ['droga', 'arsho', 'amin', 'arsho'] },
+            { name: 'Ibuprofen [250mg]', category: 'medication', price: '100 ETB', img: '../resources/images/medicene/ibuprofen.jpg', perscription: "false", stores: ['droga', 'arsho', 'amin'] },
             { name: 'Paracetamol [100mg]', category: 'medication', price: '80 ETB', img: '../resources/images/medicene/paracetamol.jpg', perscription: "false", stores: ['droga', 'gishen'] },
             { name: 'Amoxicillin [50mg]', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/amoxicillin.jpg', perscription: "false", stores: ['droga', 'gishen', 'amin'] },
             { name: 'Loratadine [60mg]', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/loratadine.jpg', perscription: "true", stores: ['amin'] },
