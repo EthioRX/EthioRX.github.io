@@ -3,44 +3,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryFilter = document.getElementById('category-filter');
     const productList = document.getElementById('product-list');
 
-    const products = [
-        // Medications
-        { name: 'Ibuprofen [250mg]', category: 'medication', price: '100 ETB', img: '../resources/images/medicene/ibuprofen.jpg', perscription: "false" },
-        { name: 'Paracetamol [100mg]', category: 'medication', price: '80 ETB', img: '../resources/images/medicene/paracetamol.jpg', perscription: "false" },
-        { name: 'Amoxicillin [50mg]', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/amoxicillin.jpg', perscription: "false" },
-        { name: 'Loratadine [60mg]', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/loratadine.jpg', perscription: "true" },
-        { name: 'Omeprazole [30mg]', category: 'medication', price: '200 ETB', img: '../resources/images/medicene/omeprazole.jpg', perscription: "false" },
-        { name: 'Metformin [20mg]', category: 'medication', price: '180 ETB', img: '../resources/images/medicene/metformin.jpg', perscription: "false" },
-        { name: 'Albuterol [50mg]', category: 'medication', price: '250 ETB', img: '../resources/images/medicene/albuterol.jpg', perscription: "true" },
-        { name: 'Levothyroxine [10mg]', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/levothyroxine.jpg', perscription: "true" },
-        { name: 'Famotidine [20mg]', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/famotidine.jpg', perscription: "true" },
-        { name: 'Fluticasone [60mg]', category: 'medication', price: '200 ETB', img: '../resources/images/medicene/fluticasone.jpg', perscription: "true" },
-      
-        // Supplements
-        { name: 'Vitamin C [30mg]', category: 'supplements', price: '80 ETB', img: '../resources/images/medicene/vitaminc.jpg', perscription: "false" },
-        { name: 'Vitamin D3 [10mg]', category: 'supplements', price: '100 ETB', img: '../resources/images/medicene/vitamind3.jpg', perscription: "false" },
-        { name: 'Omega-3 Fish Oil [3000 UI]', category: 'supplements', price: '150 ETB', img: '../resources/images/medicene/omega3.jpg', perscription: "false" },
-        { name: 'Multivitamins [60mg]', category: 'supplements', price: '120 ETB', img: '../resources/images/medicene/multivitamins.jpg', perscription: "false" },
-        { name: 'Magnesium [60mg]', category: 'supplements', price: '90 ETB', img: '../resources/images/medicene/magnesium.jpg', perscription: "false" },
-        { name: 'Zinc [60mg]', category: 'supplements', price: '110 ETB', img: '../resources/images/medicene/zinc.jpg', perscription: "false" },
-        { name: 'Coenzyme Q10 [60mg]', category: 'supplements', price: '180 ETB', img: '../resources/images/medicene/coq10.jpg', perscription: "true" },
-        { name: 'Probiotics [50mg]', category: 'supplements', price: '150 ETB', img: '../resources/images/medicene/probiotics.jpg', perscription: "false" },
-        { name: 'Glucosamine [60mg]', category: 'supplements', price: '120 ETB', img: '../resources/images/medicene/glucosamine.jpg', perscription: "true" },
-        { name: 'Melatonin [100ml]', category: 'supplements', price: '100 ETB', img: '../resources/images/medicene/melatonin.jpg', perscription: "true" },
-      
-        // Medical Equipment
-        { name: 'Blood Pressure Monitor', category: 'equipment', price: '450 ETB', img: '../resources/images/medicene/bloodmonitor.jpg', perscription: "false" },
-        { name: 'Thermometer', category: 'equipment', price: '150 ETB', img: '../resources/images/medicene/thermometer.jpg', perscription: "false" },
-        { name: 'Pulse Oximeter', category: 'equipment', price: '300 ETB', img: '../resources/images/medicene/pulseoximeter.jpg', perscription: "false" },
-        { name: 'Nebulizer', category: 'equipment', price: '600 ETB', img: '../resources/images/medicene/nebulizer.jpg', perscription: "false" },
-        { name: 'First Aid Kit', category: 'equipment', price: '250 ETB', img: '../resources/images/medicene/firstaidkit.jpg', perscription: "false" },
-        { name: 'Wheelchair [5m]', category: 'equipment', price: '2000 ETB', img: '../resources/images/medicene/wheelchair.jpg', perscription: "false" },
-        { name: 'Crutches [6m]', category: 'equipment', price: '400 ETB', img: '../resources/images/medicene/crutches.jpg', perscription: "false" },
-        { name: 'Walker [6m]', category: 'equipment', price: '500 ETB', img: '../resources/images/medicene/walker.jpg', perscription: "false" },
-        { name: 'Blood Glucose Monitor', category: 'equipment', price: '350 ETB', img: '../resources/images/medicene/bloodglucosemonitor.jpg', perscription: "false" },
-        { name: 'Stethoscope', category: 'equipment', price: '200 ETB', img: '../resources/images/medicene/stethoscope.jpg', perscription: "false" }
-      ];
-      
+    let products = JSON.parse(sessionStorage.getItem('products'));
+    if (!products) {
+        const products = [
+            // Medications
+            { name: 'Ibuprofen [250mg]', category: 'medication', price: '100 ETB', img: '../resources/images/medicene/ibuprofen.jpg', perscription: "false", stores: ['droga', 'arsho', 'amin', 'arsho'] },
+            { name: 'Paracetamol [100mg]', category: 'medication', price: '80 ETB', img: '../resources/images/medicene/paracetamol.jpg', perscription: "false", stores: ['droga', 'gishen'] },
+            { name: 'Amoxicillin [50mg]', category: 'medication', price: '150 ETB', img: '../resources/images/medicene/amoxicillin.jpg', perscription: "false", stores: ['droga', 'gishen', 'amin'] },
+            { name: 'Loratadine [60mg]', category: 'medication', price: '120 ETB', img: '../resources/images/medicene/loratadine.jpg', perscription: "true", stores: ['amin'] },
+            { name: 'Omeprazole [30mg]', category: 'medication', price: '200 ETB', img: '../resources/images/medicene/omeprazole.jpg', perscription: "false", stores: ['droga', 'gishen', 'sas'] },
+
+            // Supplements
+            { name: 'Vitamin C [30mg]', category: 'supplements', price: '80 ETB', img: '../resources/images/medicene/vitaminc.jpg', perscription: "false", stores: ['droga', 'gishen', 'arsho'] },
+            { name: 'Vitamin D3 [10mg]', category: 'supplements', price: '100 ETB', img: '../resources/images/medicene/vitamind3.jpg', perscription: "false", stores: ['droga', 'gishen'] },
+            { name: 'Omega-3 Fish Oil [3000 UI]', category: 'supplements', price: '150 ETB', img: '../resources/images/medicene/omega3.jpg', perscription: "false", stores: ['droga', 'amin', 'epss'] },
+            { name: 'Multivitamins [60mg]', category: 'supplements', price: '120 ETB', img: '../resources/images/medicene/multivitamins.jpg', perscription: "false", stores: ['droga', 'gishen', 'amin'] },
+            { name: 'Magnesium [60mg]', category: 'supplements', price: '90 ETB', img: '../resources/images/medicene/magnesium.jpg', perscription: "false", stores: ['droga', 'amin', 'epss'] },
+
+            // Medical Equipment
+            { name: 'Blood Pressure Monitor', category: 'equipment', price: '450 ETB', img: '../resources/images/medicene/bloodmonitor.jpg', perscription: "false", stores: ['gishen', 'arsho'] },
+            { name: 'Thermometer', category: 'equipment', price: '150 ETB', img: '../resources/images/medicene/thermometer.jpg', perscription: "false", stores: ['gishen', 'amin', 'sas'] },
+            { name: 'Pulse Oximeter', category: 'equipment', price: '300 ETB', img: '../resources/images/medicene/pulseoximeter.jpg', perscription: "false", stores: ['gishen', 'sas'] },
+            { name: 'Nebulizer', category: 'equipment', price: '600 ETB', img: '../resources/images/medicene/nebulizer.jpg', perscription: "false", stores: [ 'gishen', 'amin', 'arsho'] },
+            { name: 'First Aid Kit', category: 'equipment', price: '250 ETB', img: '../resources/images/medicene/firstaidkit.jpg', perscription: "false", stores: ['droga', 'amin', 'epss'] },
+        ];
+        sessionStorage.setItem('products', JSON.stringify(products));
+    }
+
+    products = JSON.parse(sessionStorage.getItem('products'));
 
     function displayProducts(products) {
         productList.innerHTML = '';
@@ -48,13 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
             productCard.setAttribute('data-category', product.category.toLowerCase());
-
-            if(product.perscription == "true"){
-                const productIcon = document.createElement('img');
-                productIcon.id = "rx-icon";
-                productIcon.src = "../resources/images/icons/rxicon.png";
-                productCard.appendChild(productIcon);
-            }
 
             const productBox = document.createElement('div');
             productBox.id = 'product-box';
@@ -64,9 +47,39 @@ document.addEventListener('DOMContentLoaded', () => {
             productImg.src = product.img;
             productBox.appendChild(productImg);
             
+            const productNameTop = document.createElement('hgroup');
+            productNameTop.style.display = "flex";
+            productNameTop.style.gap = "20px";
             const productName = document.createElement('h3');
             productName.textContent = product.name;
-            productBox.appendChild(productName);
+            productNameTop.appendChild(productName);
+
+            if(product.perscription == "true"){
+                const productIcon = document.createElement('img');
+                productIcon.id = "rx-icon";
+                productIcon.src = "../resources/images/icons/rxicon.png";
+                productIcon.alt = "Perscription Only";
+                productCard.appendChild(productIcon);
+            }
+            productBox.appendChild(productNameTop);
+
+            const storeLogosGroup = document.createElement('hgroup');
+            storeLogosGroup.style.display = 'flex';
+            storeLogosGroup.style.position = 'absolute';
+            storeLogosGroup.style.top = '10px';
+            storeLogosGroup.style.right = '30px';
+            storeLogosGroup.style.width = '200px';
+            storeLogosGroup.style.height = '50px';
+            storeLogosGroup.style.justifyContent = 'flex-end';
+        
+            product.stores.forEach(store => {
+              const storeIcon = document.createElement('img');
+              storeIcon.id = "rx-icon";
+              storeIcon.src = `../resources/images/logos/mini/${store.toLowerCase()}.png`;
+              storeIcon.style.backgroundColor = '#57625d';
+              storeLogosGroup.appendChild(storeIcon);
+            });
+            productBox.appendChild(storeLogosGroup);
 
             const productPrice = document.createElement('p');
             productPrice.textContent = product.price;
