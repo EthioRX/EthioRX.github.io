@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </tbody>
           </table>
           <p style="font-size: 1rem; color: black;">Sum: ${totalCost.toFixed(2)} Birr</p>
-          <p style="font-size: 1rem; color: grey;">Delivery: ${totalCost.toFixed(2) * 0.15} Birr</p>
-          <h2 style="font-size: 1.4rem; color: black;">Total Cost: ${totalCost.toFixed(2) + (totalCost.toFixed(2) * 0.15)} Birr</h2>
+          <p style="font-size: 1rem; color: grey;">Delivery: ${(totalCost * 0.15).toFixed(2)} Birr</p>
+          <h2 style="font-size: 1.4rem; color: black;">Total Cost: ${(totalCost + (totalCost * 0.15)).toFixed(2)} Birr</h2>
       `;
     }
 
