@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productBox.appendChild(productNameTop);
 
             const storeLogosGroup = document.createElement('hgroup');
+            storeLogosGroup.style.gap = "20px";
             storeLogosGroup.style.display = 'flex';
             storeLogosGroup.style.position = 'absolute';
             storeLogosGroup.style.top = '10px';
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
               const storeIcon = document.createElement('img');
               storeIcon.id = "store-icon";
               storeIcon.src = `../resources/images/logos/mini/${store.toLowerCase()}.png`;
-              storeIcon.style.filter = "drop-shadow(2px 4px 6px black)";
+              storeIcon.style.filter = "grayscale(1)";
               storeLogosGroup.appendChild(storeIcon);
             });
             productBox.appendChild(storeLogosGroup);
