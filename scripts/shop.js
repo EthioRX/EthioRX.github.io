@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
             productNameTop.appendChild(productName);
 
             if(product.perscription == "true"){
-                const productIcon = document.createElement('img');
-                productIcon.id = "rx-icon";
-                productIcon.src = "../resources/images/icons/rxicon.png";
-                productIcon.alt = "Perscription Only";
-                productNameTop.appendChild(productIcon);
+                const productRxIcon = document.createElement('img');
+                productRxIcon.id = "rx-icon";
+                productRxIcon.src = "../resources/images/icons/rxicon.png";
+                productRxIcon.alt = "Perscription Only";
+                productNameTop.appendChild(productRxIcon);
             }
             productBox.appendChild(productNameTop);
 
