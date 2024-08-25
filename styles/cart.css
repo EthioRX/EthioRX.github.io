@@ -87,7 +87,7 @@ th, td{
     flex-direction: column;
 }
 
-.product-card {
+.drugInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +104,7 @@ th, td{
     justify-content: flex-end;
 }
 
-.product-card img {
+.drugInfo img {
     max-width: 40%;
 }
 

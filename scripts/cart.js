@@ -1,46 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to display products in the cart
     function displayCart() {
-      const productTable = document.getElementById('products-table');
-      const medHistory = document.getElementById('medhistory');
-      medHistory.innerHTML = '';
+      const productsGroup = document.querySelector('.products-group');
+      productsGroup.innerHTML = '';
+
       let totalCost = 0;
-
       const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
-
       cart.forEach((product) => {
-        const productElement = document.createElement('tr');
-        productElement.className = 'product-card';
+          cartHTML += `
+              <tr class="product-card">
+                  <td class="drugInfo">
+                      <img src="${product.img}" />
+                      <h3>${product.name}</h3>
+                  </td>
+                  <td class="drugAmount">1</td>
+                  <td class="drugAmount">${product.price.toFixed(2)} Birr</td>
+              </tr>
+          `;
 
-        const drugInfo = document.createElement('th');
-        const productImg = document.createElement('img');
-        const productName = document.createElement('h3');
-        drugInfo.className = 'drugInfo';
-        productImg.src = product.img;
-        productName.textContent = product.name;
-        drugInfo.appendChild(productImg);
-        drugInfo.appendChild(productName);
-        medHistory.appendChild(productElement);
-
-        const drugAmount = document.createElement('th');
-        drugAmount.className = 'drugAmount';
-        drugAmount.textContent = product.name;
-        medHistory.appendChild(drugAmount);
-
-
-        const drugPrice = document.createElement('th');
-        drugPrice.className = 'drugAmount';
-        drugPrice.textContent = product.price;
-        medHistory.appendChild(drugPrice);
-
-        totalCost += parseFloat(product.price);
+          totalCost += parseFloat(product.price);
       });
 
-      const totalPrice = document.createElement('i');
-      totalPrice.textContent = `Total Cost: ${totalCost.toFixed(2)}Birr`;
-      totalPrice.style.fontSize = `1rem`;
-      totalPrice.style.color = `black`;
-      productTable.appendChild(totalPrice);
+      productsGroup.innerHTML = `
+          <table class="products-table" style="width: 100%;">
+            <thead>
+              <tr>
+                <th>Drug Info</th>
+                <th>Amount</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+                ${cartHTML}
+            </tbody>
+          </table>
+          <p style="font-size: 1rem; color: black;">Total Cost: ${totalCost.toFixed(2)} Birr</p>
+      `;
     }
 
     displayCart();
