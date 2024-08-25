@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
             product.stores.forEach(store => {
               const storeIcon = document.createElement('img');
-              storeIcon.id = "rx-icon";
+              storeIcon.id = "store-icon";
               storeIcon.src = `../resources/images/logos/mini/${store.toLowerCase()}.png`;
-              storeIcon.style.backgroundColor = '#57625d';
+              storeIcon.style.filter = "drop-shadow(2px 4px 6px black)";
               storeLogosGroup.appendChild(storeIcon);
             });
             productBox.appendChild(storeLogosGroup);
