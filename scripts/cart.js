@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const productsGroup = document.querySelector('.products-group');
       productsGroup.innerHTML = '';
 
+      let cartHTML = "";
       let totalCost = 0;
       const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
       cart.forEach((product) => {
