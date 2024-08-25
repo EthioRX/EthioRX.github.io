@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <h3>${product.name}</h3>
                   </td>
                   <td class="drugAmount">1</td>
-                  <td class="drugAmount">${Number(product.price).toFixed(2)} Birr</td>
+                  <td class="drugAmount">${parseFloat(product.price).toFixed(2)} Birr</td>
               </tr>
           `;
 
@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${cartHTML}
             </tbody>
           </table>
-          <p style="font-size: 1rem; color: black;">Total Cost: ${totalCost.toFixed(2)} Birr</p>
+          <p style="font-size: 1rem; color: black;">Sum Cost: ${totalCost.toFixed(2)} Birr</p><br>
+          <p style="font-size: 1rem; color: grey;">Delivery Cost: ${totalCost.toFixed(2)} Birr</p><br>
+          <h2 style="font-size: 1rem; color: black;">Total Cost: ${totalCost.toFixed(2) } Birr</h2><br>
       `;
     }
 
