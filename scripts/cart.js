@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayCart() {
       const productTable = document.getElementById('products-table');
       const medHistory = document.getElementById('medhistory');
-      productList.innerHTML = '';
+      medHistory.innerHTML = '';
       let totalCost = 0;
 
       const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
