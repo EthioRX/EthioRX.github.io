@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <h3>${product.name}</h3>
                   </td>
                   <td class="drugAmount">1</td>
-                  <td class="drugAmount">${product.price.toFixed(2)} Birr</td>
+                  <td class="drugAmount">${Number(product.price).toFixed(2)} Birr</td>
               </tr>
           `;
 
