@@ -194,7 +194,7 @@
     flex-direction: column;
 }
 
-.part-four .brands {
+.part-four .partners {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -204,7 +204,7 @@
     row-gap: 40px;
 }
 
-.part-four .brands img {
+.part-four .partners img {
     height: auto;
     width: 20vw;
     max-width: 200px;

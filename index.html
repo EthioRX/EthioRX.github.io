@@ -13,8 +13,9 @@
         <link rel="icon" type="image/x-icon" href="./resources/images/logos/icon.png">
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/about.css">
-        <script src="./scripts/about.js"></script>
         <script src="./scripts/main.js"></script>
+        <script src="./scripts/about.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     </head>
     <body>
         <!--Navigation-->
@@ -23,16 +24,16 @@
                 <div class="nav-brand">
                     <a href="./index.html"> <img src="./resources/images/logos/EthioRX.png" alt="Brand Image"></a>
                 </div>
-                
+
                 <nav class="nav-list-large">
                     <div class="nav-item">
-                        <a href="./index.html" class="nav-link active">About</a>
+                        <a href="./index.html" class="nav-link active" id="about-link">About</a>
                     </div>
                     <div class="nav-item">
-                        <a href="./pages/shop.html" class="nav-link">Shop</a>
+                        <a href="./pages/shop.html" class="nav-link" id="shop-link">Shop</a>
                     </div>
                     <div class="nav-item">
-                        <a href="./pages/support.html" class="nav-link">Support</a>
+                        <a href="./pages/support.html" class="nav-link" id="support-link">Support</a>
                     </div>
                 </nav>
 
@@ -45,18 +46,18 @@
                         </select>
                     </div>
                     <div class="nav-end-item" style=" padding: 10px;">
-                        <a href="./pages/cart.html" class="nav-link" id="cart">
+                        <a href="./pages/cart.html" class="nav-link" id="cart-link">
                             <img class="nav-icon" src="./resources/images/icons/cart.png" alt="Cart icon">
-                            <p>Cart</p>
+                            <p id="cart-text">Cart</p>
                         </a>
                     </div>
                     <div class="nav-end-item" style=" padding: 10px;">
-                        <a href="./pages/profile.html" class="nav-link" id="profile">
+                        <a href="./pages/profile.html" class="nav-link" id="profile-link">
                             <img class="nav-icon" src="./resources/images/icons/profile.png" alt="Profile icon">
-                            <p>Profile</p>
+                            <p id="profile-text">Profile</p>
                         </a>
                     </div>
-                </div>   
+                </div>
                 <div class="hamburger">
                     <p>☰</p>
                     <p class="menu-text">MENU</p>
@@ -64,13 +65,13 @@
             </div>
             <nav class="nav-list-menu" style="display: none;">
                 <div class="nav-item">
-                    <a href="./index.html" class="nav-link active">About</a>
+                    <a href="./index.html" class="nav-link active" id="about-link-menu">About</a>
                 </div>
                 <div class="nav-item">
-                    <a href="./pages/shop.html" class="nav-link">Shop</a>
+                    <a href="./pages/shop.html" class="nav-link" id="shop-link-menu">Shop</a>
                 </div>
                 <div class="nav-item">
-                    <a href="./pages/support.html" class="nav-link">Support</a>
+                    <a href="./pages/support.html" class="nav-link" id="support-link-menu">Support</a>
                 </div>
             </nav>
         </header>
@@ -81,10 +82,10 @@
                 <img src="./resources/images/logos/icon.png" alt="logo">
 
                 <div class="first">
-                    <h3>Recieving Medication, Made Easier.</h3>
-                    <p>EthioRX® makes getting both prescription and Over-the-counter medicine to your hands simpler and quicker</p>
+                    <h3 id="receiving-medication">Recieving Medication, Made Easier.</h3>
+                    <p id="ethiorx-description">EthioRX® makes getting both prescription and Over-the-counter medicine to your hands simpler and quicker</p>
                     <div class="to-shop">
-                        <a href="./pages/shop.html" class="to-shop-link">Visit The Shop</a>
+                        <a href="./pages/shop.html" class="to-shop-link" id="visit-shop-link">Visit The Shop</a>
                     </div>
                 </div>
                 <div class="vid-div" style="background-image: url(./resources/images/icons/bodyback.png), linear-gradient(to bottom, transparent 46%, #f9f9f9 46%);">
@@ -96,10 +97,10 @@
             <div class="part-two">
                 <div class="side1">
                     <hgroup>
-                        <h3>Delivering Medications Anywhere With Consistent Experience</h3><br>
-                        You can access our pharmacy delivery services anywhere in Ethiopia as long as you have an internet connection.<br><br>
-                        Our Prescription Fulfillment Follows Best Practices, Meaning any patient from one of our partnered medical facilities can legally order and receive their prescription within a few hours.<br><br>
-                        Our online pharmacy platform builds on our expertise to bring flexible delivery options, email notifications, tracking, a comfortable user dashboard, and various levels of support.<br><br>
+                        <h3 id="delivering-medications">Delivering Medications Anywhere With Consistent Experience</h3><br>
+                        <p id="access-services">You can access our pharmacy delivery services anywhere in Ethiopia as long as you have an internet connection.</p><br><br>
+                        <p id="prescription-fulfillment">Our Prescription Fulfillment Follows Best Practices, Meaning any patient from one of our partnered medical facilities can legally order and receive their prescription within a few hours.</p><br><br>
+                        <p id="online-platform">Our online pharmacy platform builds on our expertise to bring flexible delivery options, email notifications, tracking, a comfortable user dashboard, and various levels of support.</p><br><br>
                     </hgroup>
                 </div>
 
@@ -110,8 +111,8 @@
                         </div>
                         <div>
                             <hgroup>
-                                <h3>A Quick and User-Friendly System</h3>
-                                Find your exact medication and order the product within few minutes using our up-to-date system.
+                                <h3 id="quick-system">A Quick and User-Friendly System</h3>
+                                <p id="find-medication">Find your exact medication and order the product within few minutes using our up-to-date system.</p>
                             </hgroup>
                         </div>
                     </div>
@@ -124,8 +125,8 @@
                         </div>
                         <div>
                             <hgroup>
-                                <h3>Efficient Delivery Schedule</h3> 
-                                Your deliveries can be fine-tuned to schedule to match your needs, including adjusting for traffic and time of day to ensure timely arrival.
+                                <h3 id="efficient-delivery">Efficient Delivery Schedule</h3>
+                                <p id="delivery-schedule">Your deliveries can be fine-tuned to schedule to match your needs, including adjusting for traffic and time of day to ensure timely arrival.</p>
                             </hgroup>
                         </div>
                     </div>
@@ -138,8 +139,8 @@
                         </div>
                         <div>
                             <hgroup>
-                                <h3>Delivery Notifications</h3> 
-                                Receive notifications and updates through events from our pharmacy platform, including when your prescription is processed, shipped, and out for delivery.
+                                <h3 id="delivery-notifications">Delivery Notifications</h3>
+                                <p id="receive-notifications">Receive notifications and updates through events from our pharmacy platform, including when your prescription is processed, shipped, and out for delivery.</p>
                             </hgroup>
                         </div>
                     </div>
@@ -149,23 +150,23 @@
             <!--Part 3-->
             <div class="part-three">
                 <hgroup>
-                    <h3> We speak your language </h3><br>
-                    <p>For your convenience, EthioRX offers support in English, Amharic, and Oromiffa. </p><br>
-                    <p>Ordering your prescription medication has never been easier, simpler and more intuitive. </p><br>
-                    <p>More than yor local pharmacy you can order prescription required medicene easily, view filtered medicene info provided by our institution </p><br>
-                    <p>Help on order steps can be found in the support page. </p><br>
+                    <h3 id="we-speak-your-language"> We speak your language </h3><br>
+                    <p id="convenience">For your convenience, EthioRX offers support in English, Amharic, and Oromiffa. </p><br>
+                    <p id="easier-ordering">Ordering your prescription medication has never been easier, simpler and more intuitive. </p><br>
+                    <p id="more-than-local">More than yor local pharmacy you can order prescription required medicene easily, view filtered medicene info provided by our institution </p><br>
+                    <p id="help-on-order">Help on order steps can be found in the support page. </p><br>
                 </hgroup>
             </div>
 
             <!--Part 4-->
             <div class="part-four">
                 <div style="padding-top: 20px;">
-                    <h3 style="
+                    <h3 id="our-trusted-partners" style="
                         padding: 2vw;
                         font-size: clamp(1.5rem, 5vw, 2.5rem);
                     ">Our Trusted Partners</h3>
                 </div>
-                <div class="brands">
+                <div class="partners">
                     <div>
                         <figure>
                             <img src="./resources/images/logos/blacklion.png" alt="MOH Logo" title="MOH Ethiopia">
