@@ -3,9 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <meta name="description" content="Sample webpage for an online pharmacy  with medication delivery in Ethiopia.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="EthioRX Pharmacy">
+        <meta property="og:description" content="Sample webpage for an online pharmacy support in Ethiopia.">
+        <meta property="og:image" content="../resources/images/logos/EthioRX.png">
+        <meta property="og:url" content="https://EthioRX.github.io/">
+        <link rel="icon" type="image/x-icon" href="../resources/images/logos/icon.png">
+        <title>Profile | EthioRX</title>
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/profile.css">
         <script src="../scripts/profile.js"></script>
@@ -32,13 +37,16 @@
                 </nav>
 
                 <div class="nav-end">
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    <div id="google_translate_element" style="display:none;"></div>
                     <div class="nav-end-item" style="display: flex; align-items: center;">
-                        <select id="translate" class="nav-link" onchange="changeLanguage(this.value)" style="background-color: royalblue; border: 0px;">
+                        <select id="language_selector" class="nav-link" onchange="translatePage(this.value)" style="background-color: royalblue; border: 0px;">
                             <option value="en">English</option>
                             <option value="am">Amharic</option>
                             <option value="om">Oromiffa</option>
                         </select>
                     </div>
+
                     <div class="nav-end-item" style=" padding: 10px;">
                         <a href="../pages/cart.html" class="nav-link" id="cart">
                             <img class="nav-icon" src="../resources/images/icons/cart.png" alt="Cart icon">
@@ -74,7 +82,7 @@
         <main style="padding-top: 150px">
             <div class="top-title" style="background-image: url(../resources/images/icons/bodyback2.png), linear-gradient(to bottom, transparent 46%, #ffffff 46%);">
                 <h1 style="
-                    font-size: clamp(1.875rem, 4.375vw + 1rem, 6.25rem);
+                    font-size: clamp(1.875rem, 2.375vw + 1rem, 6.25rem);
                 ">Profile</h1>
                 <button class="edit-profile-btn" style="
                     background-color: #fff;

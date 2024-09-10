@@ -153,7 +153,7 @@ header {
     .bottom-nav nav {
         display: none;
     }
-    .nav-end-item #translate{
+    .nav-end-item #language_selector{
         width: 72px;
     }
     .nav-end-item #cart p{
@@ -292,4 +292,8 @@ footer {
 
 .foot-recog img {
     width: 50%;
+}
+
+.skiptranslate{
+    display: none;
 }

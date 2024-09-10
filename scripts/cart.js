@@ -77,9 +77,10 @@ function validateForm() {
   const phoneInput = document.getElementById('phone');
   const cityInput = document.getElementById('city');
   const houseNumberInput = document.getElementById('house-number');
+  const locationInput = document.getElementById('setlocation');
   const prescriptionInput = document.getElementById('prescription');
-
-  if (nameInput.value.trim() === '' || ageInput.value.trim() === '' || phoneInput.value.trim() === '' || cityInput.value.trim() === '' || houseNumberInput.value.trim() === '' || prescriptionInput.value.trim() === '') {
+  
+  if (nameInput.value.trim() === '' || ageInput.value.trim() === '' || phoneInput.value.trim() === '' || cityInput.value.trim() === '' || houseNumberInput.value.trim() === '' || locationInput.textContent.includes('location not set...')) {
     alert('Please fill in all the required fields.');
     return;
   }
@@ -107,9 +108,13 @@ function validateForm() {
     return;
   }
 
-  if (!checkPrescriptionExists(prescriptionInput.value)) {
-    alert('The entered prescription code does not exist. Please check and try again.');
-    return;
+  const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+  const requiresPrescription = cart.some(product => product.perscription === "true");
+  if (requiresPrescription) {
+    if (!checkPrescriptionExists(prescriptionInput.value)) {
+      alert('The entered prescription code does not exist. Please check and try again.');
+      return;
+    }
   }
 
   alert('Proceeding to payment...');

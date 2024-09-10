@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>EthioRX Online Pharmacy</title>
         <meta name="description" content="Sample webpage for an online pharmacy  with medication delivery in Ethiopia.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:title" content="EthioRX Pharmacy">
         <meta property="og:description" content="Sample webpage for an online pharmacy support in Ethiopia.">
         <meta property="og:image" content="./resources/images/logos/EthioRX.png">
         <meta property="og:url" content="https://EthioRX.github.io/">
+        <title>EthioRX Online Pharmacy</title>
         <link rel="icon" type="image/x-icon" href="./resources/images/logos/icon.png">
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/about.css">
@@ -27,24 +27,27 @@
                 
                 <nav class="nav-list-large">
                     <div class="nav-item">
-                        <a href="./index.html" class="nav-link">About</a>
+                        <a href="./index.html" class="nav-link active">About</a>
                     </div>
                     <div class="nav-item">
                         <a href="./pages/shop.html" class="nav-link">Shop</a>
                     </div>
                     <div class="nav-item">
-                        <a href="./pages/support.html" class="nav-link active">Support</a>
+                        <a href="./pages/support.html" class="nav-link">Support</a>
                     </div>
                 </nav>
 
                 <div class="nav-end">
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    <div id="google_translate_element" style="display:none;"></div>
                     <div class="nav-end-item" style="display: flex; align-items: center;">
-                        <select id="translate" class="nav-link" onchange="changeLanguage(this.value)" style="background-color: royalblue; border: 0px;">
+                        <select id="language_selector" class="nav-link" onchange="translatePage(this.value)" style="background-color: royalblue; border: 0px;">
                             <option value="en">English</option>
                             <option value="am">Amharic</option>
                             <option value="om">Oromiffa</option>
                         </select>
                     </div>
+
                     <div class="nav-end-item" style=" padding: 10px;">
                         <a href="./pages/cart.html" class="nav-link" id="cart">
                             <img class="nav-icon" src="./resources/images/icons/cart.png" alt="Cart icon">

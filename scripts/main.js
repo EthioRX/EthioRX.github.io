@@ -28,4 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
             link.classList.add('active');
         });
     });
+
+    let profile = JSON.parse(sessionStorage.getItem('profile'));
+    if (!profile) {
+        profile = {
+            language: "en",
+            profile: "test"
+        };
+        sessionStorage.setItem('profile', JSON.stringify(profile));
+    }
+    document.querySelector("#language_selector").value = profile.language;
+    translatePage(profile.language);
 });
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+
+// Function to trigger translation
+function translatePage(language) {
+    let profile = JSON.parse(sessionStorage.getItem('profile'));
+    profile.language = language;
+    sessionStorage.setItem('profile', JSON.stringify(profile));
+
+    var googleTranslateFrame = document.querySelector('.goog-te-combo');
+    if (googleTranslateFrame) {
+        googleTranslateFrame.value = language;
+        googleTranslateFrame.dispatchEvent(new Event('change'));  // Trigger the change event
+    }
+}
